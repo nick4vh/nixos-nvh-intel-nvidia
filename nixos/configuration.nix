@@ -68,9 +68,9 @@
   # Füge deinen User zur Docker Gruppe hinzu (wird unten im `users` Block gemacht)
 
   # Definiere deinen Benutzer
-  users.users.<dein-username> = {
+  users.users.nick = {
     isNormalUser = true;
-    description = "Dein Name";
+    description = "Nick";
     extraGroups = [ "networkmanager" "wheel" "docker" "adbusers" ]; # wheel für sudo, docker für Docker
     # Setze hier dein initiales Passwort (wird gehasht) oder lass es weg für Passwortabfrage bei Installation
     # initialPassword = "einsehrsicherespasswort";
