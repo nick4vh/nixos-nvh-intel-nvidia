@@ -12,8 +12,8 @@
   console.keyMap = "de";
 
   # Bootloader (systemd-boot ist oft einfacher auf UEFI)
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  # boot.loader.systemd-boot.enable = true;
+  # boot.loader.efi.canTouchEfiVariables = true;
 
   # Netzwerk (NetworkManager ist üblich)
   networking.networkmanager.enable = true;

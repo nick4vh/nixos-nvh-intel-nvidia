@@ -80,4 +80,10 @@
 
   # NixOS Versionsinformationen
   system.stateVersion = "23.11"; # Oder die Version, mit der du startest. NICHT ändern, ohne zu wissen warum!
+
+  boot.loader = {
+    systemd-boot.enable = false;
+    grub.enable = false;
+  };
+
 }
