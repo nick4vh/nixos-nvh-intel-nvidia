@@ -4,8 +4,8 @@
   # Aktiviert OpenGL
   hardware.opengl = {
     enable = true;
-    driSupport = true;
-    driSupport32Bit = true; # WICHTIG für Steam / Wine (32-bit Spiele)
+    # driSupport = true;
+    # driSupport32Bit = true; # WICHTIG für Steam / Wine (32-bit Spiele)
   };
 
   # Nvidia Treiber Konfiguration
@@ -20,6 +20,8 @@
   };
 
   hardware.nvidia = {
+
+    open = false;
     # Proprietäre Treiber nutzen
     modesetting.enable = true; # Wichtig für neuere Treiber und Wayland/XWayland
 

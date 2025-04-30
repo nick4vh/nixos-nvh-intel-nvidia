@@ -5,6 +5,7 @@
     # Lade die gemeinsamen Einstellungen
     ./common.nix
     # Hier könnten weitere Module für *diesen speziellen Host* geladen werden
+    ./hardware-configuration.nix
   ];
 
   # Hostname für diesen Rechner
@@ -26,7 +27,6 @@
   };
 
   # Sound Server (Pipewire ist modern und empfohlen)
-  sound.enable = true;
   hardware.pulseaudio.enable = false; # Deaktivieren, wenn Pipewire genutzt wird
   security.rtkit.enable = true; # Wichtig für Echtzeit-Audio
   services.pipewire = {
@@ -44,10 +44,10 @@
     remotePlay.openFirewall = true; # Firewall für Steam Link/Remote Play öffnen
     dedicatedServer.openFirewall = true; # Firewall für Server öffnen
     # Optional: Zusätzliche Pakete für Proton/Steam bereitstellen
-    extraPkgs = pkgs: with pkgs; [
+    # extraPkgs = pkgs: with pkgs; [
        # Nützlich für manche Spiele / Proton Versionen
        # z.B. mangohud, vkbasalt, wenn nicht über Home Manager
-    ];
+    # ];
   };
   programs.gamemode.enable = true; # Feral Gamemode für Performance-Boost
 
